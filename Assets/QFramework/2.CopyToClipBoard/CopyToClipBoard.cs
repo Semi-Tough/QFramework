@@ -5,7 +5,7 @@ using UnityEditor;
 
 namespace QFramework
 {
-    public class CopyToClipBoard : MonoBehaviour
+    public static class CopyToClipBoard 
     {
 #if UNITY_EDITOR
         [MenuItem("QFramework/2.CopyToClipBoard")]

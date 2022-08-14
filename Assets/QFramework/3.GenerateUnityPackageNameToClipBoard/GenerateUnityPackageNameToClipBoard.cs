@@ -6,7 +6,7 @@ using UnityEditor;
 
 namespace QFramework
 {
-    public class GenerateUnityPackageNameToClipBoard : MonoBehaviour
+    public static class GenerateUnityPackageNameToClipBoard 
     {
 #if UNITY_EDITOR
         [MenuItem("QFramework/3.GenerateUnityPackageNameToClipBoard")]

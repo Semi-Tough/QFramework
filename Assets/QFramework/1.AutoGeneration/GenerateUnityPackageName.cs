@@ -6,7 +6,7 @@ using UnityEditor;
 
 namespace QFramework
 {
-    public class GenerateUnityPackageName
+    public static class GenerateUnityPackageName
     {
 #if UNITY_EDITOR
         [MenuItem("QFramework/1.GenerateUnityPackageName")]
