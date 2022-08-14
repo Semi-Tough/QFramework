@@ -9,7 +9,7 @@ namespace QFramework
     public static class GenerateUnityPackageName
     {
 #if UNITY_EDITOR
-        [MenuItem("QFrameWork/1.GenerateUnityPackageName")]
+        [MenuItem("QFramework/1.GenerateUnityPackageName")]
 #endif
         private static void Generate()
         {
