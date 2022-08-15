@@ -14,7 +14,7 @@ namespace QFramework
         private static void Open()
         {
             string combine = Path.Combine(Application.dataPath, "../");
-            Application.OpenURL("file://" + combine);
+            Application.OpenURL("file:///" + combine);
         }
     }
 }
