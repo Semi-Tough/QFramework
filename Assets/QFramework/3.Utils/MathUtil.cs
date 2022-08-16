@@ -2,7 +2,7 @@
 
 namespace QFramework
 {
-    public class PercentFunction
+    public class MathUtil
     {
         public static bool Percent(int percent)
         {

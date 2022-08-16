@@ -4,7 +4,7 @@
 
 namespace QFramework
 {
-    public class SimplyLocalPosition
+    public class TransformSimply
     {
         public static void SetLocalPosX(Transform transform, float x)
         {
@@ -49,6 +49,13 @@ namespace QFramework
             localPos.y = y;
             localPos.z = z;
             transform.localPosition = localPos;
+        }
+        
+        public static void Identity(Transform transform)
+        {
+            transform.localPosition = Vector3.zero;
+            transform.localScale = Vector3.zero;
+            transform.localRotation = Quaternion.identity;
         }
     }
 }
