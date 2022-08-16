@@ -1,11 +1,13 @@
-﻿using UnityEngine;
-
-
+﻿using System;
+using System.Collections;
+using UnityEngine;
 
 namespace QFramework
 {
-    public class TransformSimply
+    public abstract class MonoBehaviorSimply : MonoBehaviour
     {
+        #region SetLocalPosition
+
         public static void SetLocalPosX(Transform transform, float x)
         {
             Vector3 localPos = transform.localPosition;
@@ -50,12 +52,33 @@ namespace QFramework
             localPos.z = z;
             transform.localPosition = localPos;
         }
-        
-        public static void Identity(Transform transform)
+
+        #endregion
+
+        #region TransformIdentity
+
+        public static void TransformIdentity(Transform transform)
         {
             transform.localPosition = Vector3.zero;
             transform.localScale = Vector3.zero;
             transform.localRotation = Quaternion.identity;
         }
+
+        #endregion
+
+        #region DelayWithCoroutine
+
+        public void Delay(float seconds, Action callBack)
+        {
+            StartCoroutine(DelayCoroutine(seconds, callBack));
+        }
+
+        private static IEnumerator DelayCoroutine(float seconds, Action callBack)
+        {
+            yield return new WaitForSeconds(seconds);
+            callBack.Invoke();
+        }
+
+        #endregion
     }
 }
